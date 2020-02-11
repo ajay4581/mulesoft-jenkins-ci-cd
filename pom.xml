@@ -51,7 +51,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					    <cloudHubDeployment>
-		                                <uri>https://anypoint.mulesoft.com</uri>
+		                                <uri>http://anypoint.mulesoft.com</uri>
 		                                <muleVersion>${mule.maven.plugin.version}</muleVersion>
 		                                <username>anandamudi5</username>
 		                                <password>Miracle@321</password>
