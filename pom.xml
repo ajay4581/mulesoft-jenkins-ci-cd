@@ -28,13 +28,14 @@
 				<configuration>
 				</configuration>
 			</plugin>
-			<plugin>
-                                <groupId>org.apache.maven.plugins</groupId>
-                                <artifactId>maven-deploy-plugin</artifactId>
-                                <configuration>
-                                </configuration>
-                       </plugin>
-		</plugins>
+	                <plugin>
+                               <groupId>org.codehaus.mojo</groupId>
+                               <artifactId>properties-maven-plugin</artifactId>
+                               <version>1.0.0</version>
+                               <executions>true<execution>
+                               <configuration>
+                               </configuration>
+                       </plugins>
 	</build>
 
 	<dependencies>
