@@ -28,7 +28,7 @@
 				<configuration>
 					    <cloudHubDeployment>
 		                                <uri>https://anypoint.mulesoft.com</uri>
-		                                <muleVersion>${mule.version}</muleVersion>
+		                                <muleVersion>${mule.maven.plugin.version}</muleVersion>
 		                                <username>anandamudi5</username>
 		                                <password>Miracle@321</password>
 		                                <applicationName>mulesoft-jenkins-ci-cd</applicationName>
