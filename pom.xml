@@ -29,21 +29,33 @@
 				</configuration>
 			</plugin>
 			<plugin>
-                           <groupId>org.codehaus.mojo</groupId>
-                           <artifactId>properties-maven-plugin</artifactId>
-                           <version>1.0.0</version>
-                         <executions>
-                             <execution>
-                                <phase>initialize</phase>
-                                   <goals>
-                                      <goal>read-project-properties</goal>
-                                   </goals>
-                               <configuration>
-                     
-                                </configuration>
-                        </execution>
-                     </executions>
-                       </plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>add-resource</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>add-resource</goal>
+						</goals>
+						<configuration>
+							<resources>
+								<resource>
+									<directory>src/main/app/</directory>
+								</resource>
+								<resource>
+									<directory>src/main/api/</directory>
+								</resource>
+								<resource>
+									<directory>mappings/</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
@@ -55,12 +67,9 @@
 		                                <muleVersion>${app.runtime}</muleVersion>
 		                                <username>anandamudi5</username>
 		                                <password>Miracle@321</password>
-		                                <applicationName>mulesoft-jenkins-ci-cd</applicationName>
+		                                <applicationName>mulesoftjenkinscicd</applicationName>
 		                                <environment>Sandbox</environment>
-		                                <properties>
-		                                    <key>value</key>
-		                                </properties>
-						<workerType>Micro</workerType>
+		                                <workerType>Micro</workerType>
 	                                        <workers>1</workers>
 		                            </cloudHubDeployment>
 				</configuration>
@@ -97,6 +106,33 @@
             <version>1.1.5</version>
             <classifier>mule-plugin</classifier>
         </dependency>
+	<!-- Xml configuration -->
+		<dependency>
+        	<groupId>com.mulesoft.muleesb</groupId>
+			<artifactId>mule-core-ee</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	<!-- Xml configuration -->
+		<dependency>
+			<groupId>com.mulesoft.muleesb.modules</groupId>
+			<artifactId>mule-module-spring-config-ee</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+        <!-- Mule Modules -->
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-module-scripting</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mule.modules</groupId>
+			<artifactId>mule-module-xml</artifactId>
+			<version>${mule.version}</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<repositories>
