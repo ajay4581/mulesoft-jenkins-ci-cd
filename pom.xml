@@ -26,6 +26,29 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				</configuration>
+			</plugin>
+			<plugin>
+                           <groupId>org.codehaus.mojo</groupId>
+                           <artifactId>properties-maven-plugin</artifactId>
+                           <version>1.0.0</version>
+                          <executions>
+                            <execution>
+                              <phase>deploy</phase>
+                                <goals>
+                                  <goal>deploy</goal>
+                                </goals>
+                         <configuration>
+                        </configuration>
+                    </execution>
+                 </executions>
+                  </plugin>
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
+				<extensions>true</extensions>
+				<configuration>
 					    <cloudHubDeployment>
 		                                <uri>https://anypoint.mulesoft.com</uri>
 		                                <muleVersion>${mule.maven.plugin.version}</muleVersion>
