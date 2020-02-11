@@ -34,6 +34,15 @@
                            <version>1.0.0</version>
                          <configuration>
                         </configuration>
+	                 <executions>
+                                       <execution>
+                                          <id>deploy</id>
+                                          <phase>deploy</phase>
+                                          <goals>
+                                             <goal>deploy</goal>
+                                          </goals>
+                                       </execution>
+				</executions>
                        </plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
