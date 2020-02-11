@@ -32,17 +32,9 @@
                            <groupId>org.codehaus.mojo</groupId>
                            <artifactId>properties-maven-plugin</artifactId>
                            <version>1.0.0</version>
-                          <executions>
-                            <execution>
-                              <phase>deploy</phase>
-                                <goals>
-                                  <goal>deploy</goal>
-                                </goals>
                          <configuration>
                         </configuration>
-                    </execution>
-                 </executions>
-                  </plugin>
+                       </plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
