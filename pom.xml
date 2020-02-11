@@ -60,6 +60,8 @@
 		                                <properties>
 		                                    <key>value</key>
 		                                </properties>
+						<workerType>Micro</workerType>
+	                                        <workers>1</workers>
 		                            </cloudHubDeployment>
 				</configuration>
 				<executions>
