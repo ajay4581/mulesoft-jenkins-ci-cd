@@ -29,13 +29,22 @@
 				</configuration>
 			</plugin>
 	                <plugin>
-                               <groupId>org.codehaus.mojo</groupId>
-                               <artifactId>properties-maven-plugin</artifactId>
-                               <version>1.0.0</version>
-                               <executions>true<execution>
-                               <configuration>
-                               </configuration>
-                       </plugins>
+                                <groupId>org.jsonschema2pojo</groupId>
+                                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+                                <version>0.4.34</version>
+                                <configuration>
+                                <sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
+                                <targetPackage>com.test.gen</targetPackage>
+                                <useCommonsLang3>true</useCommonsLang3>
+                                </configuration>
+                                <executions>
+                                <execution>
+                                <goals>
+                                <goal>deploy</goal>
+                                </goals>
+                                </execution>
+                                </executions>
+                        </plugin>
 	</build>
 
 	<dependencies>
