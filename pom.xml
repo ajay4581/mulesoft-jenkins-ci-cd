@@ -67,7 +67,7 @@
 		                                <muleVersion>4.2.1</muleVersion>
 		                                <username>anandamudi5</username>
 		                                <password>Miracle@321</password>
-		                                <applicationName>TestApp</applicationName>
+		                                <applicationName>TestApp786</applicationName>
 		                                <environment>Sandbox</environment>
 		                                <workerType>Micro</workerType>
 	                                        <workers>1</workers>
