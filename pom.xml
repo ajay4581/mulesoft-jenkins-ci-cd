@@ -69,7 +69,7 @@
                                        <targetType>server</targetType>
                                        <username>gbalipalli</username>
                                        <password>Gayathri99</password>
-                                       <environment>Sandbox</environment>
+                                       <environment>Design</environment>
 					   <applicationName>TestApp888</applicationName>
                                   </armDeployment>
 				</configuration>
