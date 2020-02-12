@@ -23,7 +23,7 @@
 				<configuration>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!--<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
 				<version>1.7</version>
@@ -49,7 +49,7 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin>-->
                          <plugin>
                            <groupId>org.codehaus.mojo</groupId>
                           <artifactId>properties-maven-plugin</artifactId>
