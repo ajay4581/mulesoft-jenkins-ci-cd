@@ -35,9 +35,9 @@
 							<goal>add-resource</goal>
 						</goals>
 						<configuration>
-							<!--<resources>
+							<resources>
 								<resource>
-									<directory>src/main/app/</directory>
+									<directory>src/main/mule/</directory>
 								</resource>
 								<resource>
 									<directory>src/main/api/</directory>
@@ -45,7 +45,7 @@
 								<resource>
 									<directory>mappings/</directory>
 								</resource>
-							</resources>-->
+							</resources>
 						</configuration>
 					</execution>
 				</executions>
