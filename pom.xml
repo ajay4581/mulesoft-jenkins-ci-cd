@@ -70,7 +70,7 @@
                                        <username>gbalipalli</username>
                                        <password>Gayathri99</password>
                                        <environment>Design</environment>
-					   <applicationName>TestApp888</applicationName>
+					   <applicationName>mDash_mule_demo</applicationName>
                                   </armDeployment>
 				</configuration>
 				<executions>
