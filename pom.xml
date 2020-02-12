@@ -65,7 +65,7 @@
 			           <armDeployment>
                                        <muleVersion>${app.runtime}</muleVersion>
                                        <uri>https://anypoint.mulesoft.com</uri>
-                                       <target>mule-linux</target>
+                                       <target>ubuntu</target>
                                        <targetType>server</targetType>
                                        <username>gbalipalli</username>
                                        <password>Gayathri99</password>
