@@ -62,16 +62,18 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					    <cloudHubDeployment>
-		                                <uri>https://anypoint.mulesoft.com</uri>
-		                                <muleVersion>4.2.1</muleVersion>
-		                                <username>gbalipalli</username>
-		                                <password>Gayathri99</password>
-		                                <applicationName>TestApp792</applicationName>
-		                                <environment>Sandbox</environment>
-		                                <workerType>Micro</workerType>
-	                                        <workers>1</workers>
-		                            </cloudHubDeployment>
+			           <armDeployment>
+                                       <muleVersion>${app.runtime}</muleVersion>
+                                       <uri>https://anypoint.mulesoft.com</uri>
+                                       <target>${target}</target>
+                                       <targetType>${target.type}</targetType>
+                                       <username>${username}</username>
+                                       <password>${password}</password>
+                                       <environment>${environment}</environment>
+                                       <properties>
+                                              <key>value</key>
+                                       </properties>
+                                  </armDeployment>
 				</configuration>
 				<executions>
                                        <execution>
