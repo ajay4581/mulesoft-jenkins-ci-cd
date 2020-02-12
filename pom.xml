@@ -65,15 +65,12 @@
 			           <armDeployment>
                                        <muleVersion>${app.runtime}</muleVersion>
                                        <uri>https://anypoint.mulesoft.com</uri>
-                                       <target>${target}</target>
-                                       <targetType>${target.type}</targetType>
-                                       <username>${username}</username>
-                                       <password>${password}</password>
-                                       <environment>${environment}</environment>
-				       <applicationName>${applicationName}</applicationName>
-                                       <properties>
-                                              <key>value</key>
-                                       </properties>
+                                       <target>mule-linux</target>
+                                       <targetType>server</targetType>
+                                       <username>gbalipalli</username>
+                                       <password>Gayathri99</password>
+                                       <environment>Sandbox</environment>
+					   <applicationName>TestApp888</applicationName>
                                   </armDeployment>
 				</configuration>
 				<executions>
