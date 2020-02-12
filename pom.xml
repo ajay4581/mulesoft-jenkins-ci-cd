@@ -69,8 +69,8 @@
                                        <targetType>server</targetType>
                                        <username>gbalipalli</username>
                                        <password>Gayathri99</password>
-                                       <environment>Design</environment>
-					   <applicationName>mDash_mule_demo</applicationName>
+                                       <environment>Sandbox</environment>
+					   <applicationName>mDash_mule_demo1</applicationName>
                                   </armDeployment>
 				</configuration>
 				<executions>
