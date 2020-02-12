@@ -14,8 +14,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.2.1</app.runtime>
-		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
+		<!--<app.runtime>4.2.1</app.runtime>
+		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>-->
 	</properties>
 
 	<build>
@@ -55,34 +55,81 @@
 					</execution>
 				</executions>
 			</plugin>
-
-			<plugin>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
-				<extensions>true</extensions>
-				<configuration>
-			           <armDeployment>
-                                       <muleVersion>${app.runtime}</muleVersion>
-                                       <uri>https://anypoint.mulesoft.com</uri>
-                                       <target>mDash</target>
-                                       <targetType>server</targetType>
-                                       <username>gbalipalli</username>
-                                       <password>Gayathri99</password>
-                                       <environment>Sandbox</environment>
-					   <applicationName>mDash_mule_demo1</applicationName>
-                                  </armDeployment>
-				</configuration>
-				<executions>
-                                       <execution>
-                                          <id>deploy</id>
-                                          <phase>deploy</phase>
-                                          <goals>
-                                             <goal>deploy</goal>
-                                          </goals>
-                                       </execution>
-				</executions>
-                        </plugin>
+                         <plugin>
+                           <groupId>org.codehaus.mojo</groupId>
+                          <artifactId>properties-maven-plugin</artifactId>
+                           <version>1.0.0</version>
+                          <executions>
+                              <execution>
+                                 <phase>initialize</phase>
+                                     <goals>
+                                     <goal>read-project-properties</goal>
+                                     </goals>
+                                 <configuration>
+                                  <files>
+                                    <file>src/main/resources/jenkins.properties</file>
+                                   </files>
+                                </configuration>
+                           </execution>
+                     </executions>
+                     </plugin>
+			
+			<<!-- On-premises DEPLOYMENT-->
+		<!--<plugin>
+		  <groupId>org.mule.tools.maven</groupId>
+		  <artifactId>mule-maven-plugin</artifactId>
+		  <version>${mule.maven.plugin.version}</version>
+		  <extensions>true</extensions>
+		  <configuration>
+			  <armDeployment>
+                  <muleVersion>${app.runtime}</muleVersion>
+                  <uri>https://anypoint.mulesoft.com</uri>
+                  <target>mDash</target>
+                  <targetType>server</targetType>
+                  <username>gbalipalli</username>
+                  <password>Gayathri99</password>
+                  <environment>Sandbox</environment>
+	              <applicationName>mDash_mule_demo1</applicationName>
+             </armDeployment>
+		  </configuration>
+		  <executions>
+              <execution>
+                 <id>deploy</id>
+                 <phase>deploy</phase>
+                 <goals>
+                   <goal>deploy</goal>
+                 </goals>
+              </execution>
+		  </executions>
+        </plugin>-->
+		
+		   <!-- Cloudhub Deployment-->
+		   <plugin>
+            <groupId>org.mule.tools.maven</groupId>
+            <artifactId>mule-maven-plugin</artifactId>
+            <version>2.3.2</version>
+            <configuration>
+		        <cloudHubDeployment>
+		            <uri>https://anypoint.mulesoft.com</uri>
+		            <muleVersion>${app.runtime}</muleVersion>
+		            <username>anandamudi5</username>
+		            <password>Miracle@321</password>
+		            <applicationName>mulesoftjenkinscicd4</applicationName>
+		            <environment>Sandbox</environment>
+		            <workerType>Micro</workerType>
+	                <workers>1</workers>
+		       </cloudHubDeployment>
+		    </configuration>
+           	<executions>
+               <execution>
+                  <id>deploy</id>
+                  <phase>deploy</phase>
+                  <goals>
+                     <goal>deploy</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
 			<plugin>
                                 <groupId>org.apache.maven.plugins</groupId>
                                 <artifactId>maven-deploy-plugin</artifactId>
