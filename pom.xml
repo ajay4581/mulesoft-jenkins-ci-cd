@@ -133,5 +133,15 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+	<distributionManagement>		
+			<snapshotRepository>		
+				<id>miracle-snapshots</id>		
+				<url>https://repository.mulesoft.org/releases/</url>
+			</snapshotRepository>		
+			<repository>		
+				<id>miracle-snapshots</id>		
+				<url>https://repository.mulesoft.org/releases/</url>	
+			</repository>		
+		</distributionManagement>
 
 </project>
