@@ -56,31 +56,6 @@
 				</executions>
 			</plugin>
 
-	<!-- Read property file -->
-         <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>properties-maven-plugin</artifactId>
-            <version>1.0.0</version>
-            <executions>
-               <execution>
-                  <phase>initialize</phase>
-                  <goals>
-                     <goal>read-project-properties</goal>
-                  </goals>
-                  <configuration>
-	           <resources>
-	             <resource>
-                       <directory>src/main/resources</directory>
-                        <filtering>true</filtering>
-                     </resource>
-                    </resources>
-	           <filters>
-                     <filter>${basedir}/src/main/resources/jenkins.properties</filter>
-                   </filters>
-                  </configuration>
-               </execution>
-            </executions>
-         </plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
@@ -90,9 +65,9 @@
 					    <cloudHubDeployment>
 		                                <uri>https://anypoint.mulesoft.com</uri>
 		                                <muleVersion>${app.runtime}</muleVersion>
-		                                <username>${anypoint.username}</username>
-		                                <password>${anypoint.passsword}</password>
-		                                <applicationName>TestApp6779</applicationName>
+		                                <username>anandamudi5</username>
+		                                <password>Miracle@321</password>
+		                                <applicationName>mulesoftjenkinscicd</applicationName>
 		                                <environment>Sandbox</environment>
 		                                <workerType>Micro</workerType>
 	                                        <workers>1</workers>
@@ -109,7 +84,7 @@
 				</executions>
                         </plugin>
 			
-	       <!-- On-premises DEPLOYMENT-->
+	<!-- On-premises DEPLOYMENT-->
 		<!--<plugin>
 		  <groupId>org.mule.tools.maven</groupId>
 		  <artifactId>mule-maven-plugin</artifactId>
@@ -136,7 +111,7 @@
                  </goals>
               </execution>
 		  </executions>
-          </plugin>-->
+        </plugin>-->
 			<plugin>
                                 <groupId>org.apache.maven.plugins</groupId>
                                 <artifactId>maven-deploy-plugin</artifactId>
@@ -189,3 +164,4 @@
     </pluginRepositories>
 
 </project>
+
