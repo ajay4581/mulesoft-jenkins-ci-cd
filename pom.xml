@@ -68,9 +68,15 @@
                      <goal>read-project-properties</goal>
                   </goals>
                   <configuration>
-                     <files>
-                        <file>src/main/resources/jenkins.properties</file>
-                     </files>
+	           <resources>
+	             <resource>
+                       <directory>src/main/resources</directory>
+                        <filtering>true</filtering>
+                     </resource>
+                    <resources>
+	           <filters>
+                     <filter>${basedir}/src/main/resources/jenkins.properties</filter>
+                   </filters>
                   </configuration>
                </execution>
             </executions>
