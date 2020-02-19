@@ -67,7 +67,7 @@
 		                                <muleVersion>${app.runtime}</muleVersion>
 		                                <username>${USERNAME}</username>
 		                                <password>${PASSWORD}</password>
-		                                <applicationName>TestApp6776</applicationName>
+		                                <applicationName>${ApplicationName}</applicationName>
 		                                <environment>Sandbox</environment>
 		                                <workerType>Micro</workerType>
 	                                        <workers>1</workers>
